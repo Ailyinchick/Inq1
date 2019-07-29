@@ -8,8 +8,9 @@ public class Main {
 
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
-        User user = new User("");
-        user.setName("asd");
+        User user = new User();
+    //    user.setName("asd");
+        user.getName();
         Set<ConstraintViolation<User>> violations = validator.validate(user);
         for (ConstraintViolation<User> violation: violations){
             System.out.println(violation.getMessage());

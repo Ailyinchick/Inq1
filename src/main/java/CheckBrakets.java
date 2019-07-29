@@ -8,5 +8,7 @@ import javax.validation.*;
 public @interface CheckBrakets {
     String message() default "{}";
 
+    Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }

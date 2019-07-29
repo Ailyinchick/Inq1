@@ -4,8 +4,7 @@ public class User {
     @CheckBrakets(message = "field")
     private String name;
 
-    public User(String name) {
-        this.name = name;
+    public User() {
     }
 
     @CheckBrakets(message = "method")
