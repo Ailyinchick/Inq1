@@ -1,4 +1,3 @@
-import org.springframework.lang.UsesJava7;
 
 import javax.validation.*;
 import javax.validation.Validator;
@@ -10,6 +9,7 @@ public class Main {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
         User user = new User("");
+        user.setName("asd");
         Set<ConstraintViolation<User>> violations = validator.validate(user);
         for (ConstraintViolation<User> violation: violations){
             System.out.println(violation.getMessage());
